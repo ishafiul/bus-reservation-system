@@ -1,47 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ebus</title>
-    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="vendor/css/style.css">
-    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
-
-    <link rel="stylesheet" href="vendor/gijgo/css/gijgo.css">
-</head>
-<body>
-<!-- Primary Navigation
-             ============================================= -->
-<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light bd-navbar shadow p-3 mb-5 bg-primary rounded">
-<div class="container">
-    <div class="logo">
-        <a href="index.html" title="EBus"><img src="img/logo.png" alt="" width="85" ></a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <h6><a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a></h6>
-            </li>
-            <li class="nav-item">
-                <h6><a class="nav-link " href="#">All Bus Route</a></h6>
-            </li>
-            <li class="nav-item">
-                <h6><a class="nav-link " href="#">Login</a></h6>
-            </li>
-        </ul>
-    </div>
-</div>
-</nav>
-<br>
-<br>
-<br>
-<!-- Primary Navigation end -->
+<?php
+include 'include/header.php';
+?>
 
 <!-- Bus Search and slide Start -->
 <div class="container bg-light shadow-md rounded px-4 py-4">
@@ -49,49 +8,45 @@
         <!-- Bus Search Start -->
         <div class="col-sm-4">
             <h2 class="text-4 mb-3">Book Bus Tickets</h2>
-            <form id="bookingBus" method="post">
+            <form id="bookingBus" method="POST" action="buslist.php">
                 <div class="form-row">
                     <div class="col-lg-6 form-group">
-                        <select class="form-control" required>
+                        <select class="form-control" name="from">
                             <option selected hidden>From</option>
-                            <optgroup label="Picnic">
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
-                            </optgroup>
-                            <optgroup label="Camping">
-                                <option>Tent</option>
-                                <option>Flashlight</option>
-                                <option>Toilet Paper</option>
-                            </optgroup>
+                            <option>Dhaka</option>
+                            <option>Chittagong</option>
+                            <option>Rajshahi</option>
+                            <option>Khulna</option>
+                            <option>Sylhet</option>
+                            <option>Barisal</option>
+                            <option>Rangpur</option>
+                            <option>Comilla</option>
                         </select>
 
                         <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
                     </div>
                     <div class="col-lg-6 form-group">
                         <span class="icon-inside"><i class="fas fa-map-marker-alt"></i></span>
-                        <select class="form-control" required>
+                        <select class="form-control" name="to">
                             <option selected hidden>To</option>
-                            <optgroup label="Picnic">
-                                <option>Mustard</option>
-                                <option>Ketchup</option>
-                                <option>Relish</option>
-                            </optgroup>
-                            <optgroup label="Camping">
-                                <option>Tent</option>
-                                <option>Flashlight</option>
-                                <option>Toilet Paper</option>
-                            </optgroup>
+                            <option>Dhaka</option>
+                            <option>Chittagong</option>
+                            <option>Rajshahi</option>
+                            <option>Khulna</option>
+                            <option>Sylhet</option>
+                            <option>Barisal</option>
+                            <option>Rangpur</option>
+                            <option>Comilla</option>
                         </select>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="col form-group">
-                        <input id="datepicker" type="text" class="form-control" required="" placeholder="Depart Date">
+                        <input name="date" id="datepicker" type="text" class="form-control" required="" placeholder="Depart Date">
 
                     </div>
                 </div>
-                <button class="btn btn-primary btn-block" type="submit">Search Bus</button>
+                <input class="btn btn-primary btn-block" type="submit" name="submit-search" value="Search Bus">
                 <br>
             </form>
         </div>
@@ -182,19 +137,7 @@
     </section>
 </div>
 <!-- Why Book Bus with E-Bus? start-->
-<!-- scripts -->
-<script src="vendor/jquery/dist/jquery.min.js"></script>
-<script src="vendor/bootstrap/dist/js/bootstrap.js"></script>
-<script src="vendor/font-awesome/font-awesome.js"></script>
 
-<script src="vendor/gijgo/js/gijgo.js"></script>
-<script>
-    $('#datepicker').datepicker({
-        uiLibrary: 'bootstrap4'
-    });
-</script>
-<!-- scripts end -->
-</body>
 <br>
 <footer>
     <!-- Footer
@@ -237,4 +180,13 @@
     </footer>
     <!-- Footer end -->
 </footer>
-</html>
+<!-- scripts -->
+
+<script>
+    $('#datepicker').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+</script>
+ <?php
+include 'include/footer.php';
+?>
