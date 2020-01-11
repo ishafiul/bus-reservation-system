@@ -3,7 +3,7 @@ include 'include/header.php';
 if(isset($_GET['invoice'])){
     $invoice_id =$_GET['invoice'];
 }
-$invoice_query = "SELECT f_name, l_name, `name`, `type`, `ticket_id`,`date_journey`,`reserving_time`,`d_time`,`d_place`,`a_time`,`a_place`,`price`,`number` FROM `users` JOIN all_invoice ON all_invoice.user_id=users.id JOIN _all_bus ON _all_bus.id = all_invoice.bus_id WHERE `invoice_numb`='20' GROUP BY `invoice_numb`";
+$invoice_query = "SELECT f_name, l_name, `name`, `type`, `ticket_id`,`date_journey`,`reserving_time`,`d_time`,`d_place`,`a_time`,`a_place`,`price`,`number` FROM `users` JOIN all_invoice ON all_invoice.user_id=users.id JOIN _all_bus ON _all_bus.id = all_invoice.bus_id WHERE `invoice_numb`='$invoice_id' GROUP BY `invoice_numb`";
 $result = mysqli_query($conn, $invoice_query);
 $invoice_row = mysqli_fetch_assoc($result);
 $t_price_q="SELECT COUNT(`seat_number`) FROM `invoice_temp` WHERE `invoice_numb`='$invoice_id'";

@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_assoc($invoice_result))
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ebus</title>
+    <title>E-bus</title>
     <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="vendor/css/style.css">
     <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.css">
@@ -77,7 +77,7 @@ while ($row = mysqli_fetch_assoc($invoice_result))
                         <h6><a class="nav-link " href="login.php">Login</a>
                     </li>
                     <li class="nav-item">
-                        <h6><a class="nav-link " href="reg.php">Reg</a>
+                        <h6><a class="nav-link " href="reg.php">Sign Up</a>
                         </h6>
                     </li>
                     <?php

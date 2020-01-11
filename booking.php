@@ -229,7 +229,7 @@ if(isset($_POST['book']) && isset($_GET['date'])){
                                                 class="text-muted d-block"><?php echo $bus['a_place']; ?></small></div>
 
                                     <div class="col col-sm-3 text-center d-none d-sm-block time-info"> Total Fare: <span
-                                                class="text-dark text-5 font-weight-600 ml-2">$<span id="total">0</span>
+                                                class="text-dark text-5 font-weight-600 ml-2">tk<span id="total">0</span>
                                     </div>
                                     <div class="col-12 mt-3 text-dark">
                                         <div class="row">

@@ -127,7 +127,7 @@ else {
     <div class="container bg-light shadow-md rounded py-4">
         <div class="mx-3 mb-3 text-center">
             <h4 class="">All Bus</h4>
-            <h5>Please Select Date to Select Bus</h5>
+            <h5>Please Select Date For Select Bus</h5>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
                 <input name="date" id="datepicker" type="text" class="form-control" required="" placeholder="Depart Date">
                 <input type="hidden" name="from" value="From">
